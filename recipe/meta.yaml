@@ -1,18 +1,18 @@
 {% set name = "jupyterhub-systemdspawner" %}
-{% set version = "0.13" %}
+{% set version = "0.15.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "542fba3d42c6f423f893d25eba33cc295a482bfa9de0b1fdc9e01f9f3df737bb"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b6e2d981657aa5d3794abb89b1650d056524158a3d0f0f706007cae9b6dbeb2b
 
 build:
-  number: 1
+  number: 0
   skip: true  # [osx or win or py2k]
-  script: "{{ PYTHON }} -m pip install . -vv "
+  script: '{{ PYTHON }} -m pip install . -vv '
 
 requirements:
   host:
@@ -28,11 +28,11 @@ test:
     - systemdspawner
 
 about:
-  home: "https://github.com/jupyterhub/systemdspawner"
-  license: "BSD-3-Clause"
-  license_family: "BSD"
-  license_file: "LICENSE"
-  summary: "JupyterHub Spawner using systemd for resource isolation"
+  home: https://github.com/jupyterhub/systemdspawner
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: JupyterHub Spawner using systemd for resource isolation
   description: |
     If you want to use Linux Containers (Docker, rkt, etc) for isolation and
     security benefits, but don't want the headache and complexity of container
@@ -41,8 +41,8 @@ about:
     With the systemdspawner, you get to use the familiar, traditional system
     administration tools, whether you love or meh them, without having to learn
     an extra layer of container related tooling.
-  doc_url: "https://github.com/jupyterhub/systemdspawner"
-  dev_url: "https://github.com/jupyterhub/systemdspawner"
+  doc_url: https://github.com/jupyterhub/systemdspawner
+  dev_url: https://github.com/jupyterhub/systemdspawner
 
 extra:
   recipe-maintainers:
