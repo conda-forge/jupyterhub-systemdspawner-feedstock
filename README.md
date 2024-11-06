@@ -1,11 +1,11 @@
-About jupyterhub-systemdspawner
-===============================
+About jupyterhub-systemdspawner-feedstock
+=========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterhub-systemdspawner-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jupyterhub/systemdspawner
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterhub-systemdspawner-feedstock/blob/main/LICENSE.txt)
 
 Summary: JupyterHub Spawner using systemd for resource isolation
 
