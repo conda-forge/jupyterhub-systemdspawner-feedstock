@@ -1,16 +1,16 @@
 {% set name = "jupyterhub-systemdspawner" %}
-{% set version = "0.15.0" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b6e2d981657aa5d3794abb89b1650d056524158a3d0f0f706007cae9b6dbeb2b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: b28fdf38c80d5aec47b2093053dfa19ebe53ffd9d4062a5854c737e7fba01e50
 
 build:
-  number: 4
+  number: 0
   skip: true  # [osx or win or py2k]
   script: '{{ PYTHON }} -m pip install . -vv '
 
